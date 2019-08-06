@@ -3,11 +3,11 @@ kind: Kustomization
 
 bases:
 - nginx-ingress
-- logging
-- metrics
-- keycloak
-- postgresql
-  
+#- logging
+#- metrics
+#- keycloak
+#- postgresql
+
 resources:
 - cert-manager/deployment.yaml
 - cert-manager/sa.yaml
@@ -19,9 +19,9 @@ resources:
 - external-dns/sa.yaml
 - external-dns/rbac.yaml
 
-- oauth2-proxy/deployment.yaml
-- oauth2-proxy/hpa.yaml
-- oauth2-proxy/service.yaml
+#- oauth2-proxy/deployment.yaml
+#- oauth2-proxy/hpa.yaml
+#- oauth2-proxy/service.yaml
 
 vars:
 # this VAR reference needs a CM defined in the overlay kustomization.yaml
